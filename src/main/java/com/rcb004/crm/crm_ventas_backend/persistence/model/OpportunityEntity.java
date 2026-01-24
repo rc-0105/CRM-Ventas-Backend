@@ -1,6 +1,5 @@
-package com.rcb004.crm.crm_ventas_backend.model;
+package com.rcb004.crm.crm_ventas_backend.persistence.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,13 +15,11 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "permissions")
-public class PermissionEntity {
+@Table(name = "opportunities")
+public class OpportunityEntity {
 
-    @Id
+
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Column(unique = true, nullable = false, updatable = false)
-    private String name;
+    private String id;
 }
