@@ -1,4 +1,4 @@
-package com.rcb004.crm.crm_ventas_backend.persistence.model;
+package com.rcb004.crm.crm_ventas_backend.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

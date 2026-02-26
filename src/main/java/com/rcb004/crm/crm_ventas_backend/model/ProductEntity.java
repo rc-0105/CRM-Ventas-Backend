@@ -1,9 +1,10 @@
-package com.rcb004.crm.crm_ventas_backend.persistence.model;
+package com.rcb004.crm.crm_ventas_backend.model;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,11 +16,10 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "email_logs")
-public class EmailLogEntity {
+@Table(name = "products")
+public class ProductEntity {
 
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-
 }

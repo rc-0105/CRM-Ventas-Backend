@@ -1,4 +1,4 @@
-package com.rcb004.crm.crm_ventas_backend.persistence.model;
+package com.rcb004.crm.crm_ventas_backend.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,8 +15,8 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "orders")
-public class OrderEntity {
+@Table(name = "email_logs")
+public class EmailLogEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

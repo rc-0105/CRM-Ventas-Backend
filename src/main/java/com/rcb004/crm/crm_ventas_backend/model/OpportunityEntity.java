@@ -1,10 +1,9 @@
-package com.rcb004.crm.crm_ventas_backend.persistence.model;
+package com.rcb004.crm.crm_ventas_backend.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +15,9 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "products")
-public class ProductEntity {
+@Table(name = "opportunities")
+public class OpportunityEntity {
+
 
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
