@@ -1,18 +1,14 @@
 package com.rcb004.crm.crm_ventas_backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "email_logs")
@@ -20,6 +16,25 @@ public class EmailLogEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
+    @Column(nullable = false)
+    private String subject;
+
+    @Column(name = "to_email", nullable = false)
+    private String toEmail;
+
+    @Column(columnDefinition = "TEXT")
+    private String body;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private EmailStatus status;
+
+    @Column(name = "sent_at")
+    private LocalDateTime sentAt;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id")
+    private CustomerEntity customer;
 }
